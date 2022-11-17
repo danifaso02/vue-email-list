@@ -6,9 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Genera email</title>
 </head>
 <body>
+    <main>
+
+        <!-- App -->
+        <div id="app">
+            <div v-if="!error">
+                <ul v-if="emails.lenght === 10">
+                    <li v-for="email in emails">{{email}}</li>
+                </ul>
+            </div>
+            <div v-else>
+                <h1>errore riprova</h1>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- JS -->
     <script src="main.js"></script>
 </body>
 </html>
